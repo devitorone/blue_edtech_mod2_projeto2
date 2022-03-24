@@ -1,0 +1,19 @@
+{
+  "name": "blue_edtech_mod2_projeto2",
+  "version": "1.0.0",
+  "description": "projeto 2. Blu Ed-tech",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devitorone/blue_edtech_mod2_projeto2.git"
+  },
+  "author": "Vitor Laureano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devitorone/blue_edtech_mod2_projeto2/issues"
+  },
+  "homepage": "https://github.com/devitorone/blue_edtech_mod2_projeto2#readme"
+}
