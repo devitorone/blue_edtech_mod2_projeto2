@@ -44,7 +44,7 @@ pokedex = [
 ];
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {pokedex});
 });
 
 app.listen(port, () =>
