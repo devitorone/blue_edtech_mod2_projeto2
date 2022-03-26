@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
+const path=require('path');
 const port = 3000;
+
+app.use(express.static(path.join(__dirname, "public")));
 
 app.set("view engine", "ejs");
 
@@ -32,7 +35,7 @@ pokedex = [
     name: "Mewtwo",
     type: "psychic",
     img: "./public/img/mewtwo.png",
-    description:"Its DNA is almost the same as Mew’s. However, its size and disposition are vastly different.",
+    description:"Its DNA is almost the same as Mew's. However, its size and disposition are vastly different.",
     height:'2',
     weight: '122',
     category:'genetic',
