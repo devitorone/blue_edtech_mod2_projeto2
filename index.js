@@ -4,8 +4,8 @@ const path=require('path');
 const port = 3000;
 
 app.use(express.static(path.join(__dirname, "public")));
-
 app.set("view engine", "ejs");
+app.use(express.urlencoded());
 
 const pokedex = [
   {
@@ -48,7 +48,10 @@ app.get("/", (req, res) => {
 });
 
 app.post('/add', (req, res)=>{
-    
+    const pokemon=req.body;
+    console.log(pokemon)
+    pokedex.push(pokemon)
+    res.redirect("/")
 })
 
 app.listen(port, () =>
