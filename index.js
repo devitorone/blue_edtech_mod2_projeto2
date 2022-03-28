@@ -50,9 +50,9 @@ app.get("/", (req, res) => {
   res.render("index", { pokedex });
 });
 
-app.get('/record',(req, res)=>{
-    res.render('record')
-})
+app.get("/record", (req, res) => {
+  res.render("record");
+});
 
 app.post("/submit", (req, res) => {
   const pokemon = req.body;
@@ -63,12 +63,17 @@ app.post("/submit", (req, res) => {
   res.redirect("/");
 });
 
-app.get("/update/:id", (req, res) => {
+app.get("/update", (req, res) => {
   const id = +req.params.id;
-
+  const body = req.body;
   const pokemon = pokedex.find((pokemon) => pokemon.id === id);
-  res.send(pokemon);
+  res.render("details");
 });
+
+// app.get("/details", (req, res) => {
+//     console.log(req.body);
+//   res.render("details");
+// });
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)

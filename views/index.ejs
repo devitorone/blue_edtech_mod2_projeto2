@@ -7,30 +7,27 @@
     <link rel="stylesheet" href="style.css" />
     <title>Pokedex</title>
   </head>
+  <header>
+    <h1>Pokedex</h1>
+    <ul style="list-style: none">
+      <li><a href="/">Pokedex</a></li>
+      <li><a href="/record">Record</a></li>
+    </ul>
+  </header>
   <body>
-    <header>
-      <h1>Pokedex </h1>
-      <ul style="list-style: none">
-        <li ><a href="/">Home</a></li>
-        <li><a href="/record">Record</a></li>
-        
-      </ul>
-      
-    </header>
     <main>
-        <section id="cards">
-            <% pokedex.forEach((pokemon) => { %>
-    
-                <div class="card">
-                    <img src=" <%= pokemon.img %>" alt="" >
-                    <h2><%= pokemon.name %></h2>
-                    <p class="description"><%= pokemon.description %></p>
-                    <p class="type">Type: <%= pokemon.type %></p>
-                    <a href="/update/<%= pokemon.id %>"> Edit</a>
-                </div>
-            <% }) %>
-    
-        </section>
+      <section id="cards">
+        <% pokedex.forEach((pokemon) => { %>
+
+        <div class="card">
+          <img src=" <%= pokemon.img %>" alt="" />
+          <h2><%= pokemon.name %></h2>
+          <p class="description"><%= pokemon.description %></p>
+          <p class="type">Type: <%= pokemon.type %></p>
+          <a href="/update/<%= pokemon.id %>"> Edit</a>
+        </div>
+        <% }) %>
+      </section>
     </main>
   </body>
 </html>
