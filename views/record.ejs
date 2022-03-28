@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pokedex</h1>
+      <ul style="list-style: none">
+        <li><a href="/">Home</a></li>
+        <li><a href="/record">Record</a></li>
+      </ul>
+    </header>
+    <main>
+      <section id="record">
+        <h2>Record</h2>
+
+        <form action="/submit" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="description">Description:</label>
+          <input type="text" id="description" name="description" />
+
+          <label for="type"> Type:</label>
+          <input type="text" id="type" name="type" />
+
+          <label>Image link:</label>
+          <input type="text" id="image" name="image" />
+
+          <button id="btnRecord" type="submit"><text>Submit</text></button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

@@ -16,6 +16,12 @@ header h1 {
   font-size: 3rem;
   text-align: center;
 }
+ul{
+    display: flex;
+    justify-content:center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
 main {
   margin: 0 10rem 0 10rem;
